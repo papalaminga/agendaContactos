@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,7 +28,7 @@
 		6F324B7A25EE5D2E00284859 /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		6F324B7D25EE5D3F00284859 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6F324B8025EE5D6600284859 /* AddContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactsViewController.swift; sourceTree = "<group>"; };
-		6F7F9CA6253E07920074240B /* boilerplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boilerplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7F9CA6253E07920074240B /* agendaContactos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = agendaContactos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F7F9CA9253E07920074240B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F7F9CAB253E07920074240B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6F7F9CB0253E07930074240B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,7 +69,7 @@
 		6F7F9CA7253E07920074240B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6F7F9CA6253E07920074240B /* boilerplate.app */,
+				6F7F9CA6253E07920074240B /* agendaContactos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,7 +117,6 @@
 				8F298085F1E2C70BC3873B39 /* Pods-boilerplate.debug.xcconfig */,
 				D31F1A03DE8A18E6FE5CB0A9 /* Pods-boilerplate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -132,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6F7F9CA5253E07920074240B /* boilerplate */ = {
+		6F7F9CA5253E07920074240B /* agendaContactos */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6F7F9CBA253E07940074240B /* Build configuration list for PBXNativeTarget "boilerplate" */;
+			buildConfigurationList = 6F7F9CBA253E07940074240B /* Build configuration list for PBXNativeTarget "agendaContactos" */;
 			buildPhases = (
 				B0C66503D0F9EC17D8DEC059 /* [CP] Check Pods Manifest.lock */,
 				6F7F9CA2253E07920074240B /* Sources */,
@@ -146,9 +145,9 @@
 			);
 			dependencies = (
 			);
-			name = boilerplate;
+			name = agendaContactos;
 			productName = boilerplate;
-			productReference = 6F7F9CA6253E07920074240B /* boilerplate.app */;
+			productReference = 6F7F9CA6253E07920074240B /* agendaContactos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +164,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6F7F9CA1253E07920074240B /* Build configuration list for PBXProject "boilerplate" */;
+			buildConfigurationList = 6F7F9CA1253E07920074240B /* Build configuration list for PBXProject "agendaContactos" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -178,7 +177,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6F7F9CA5253E07920074240B /* boilerplate */,
+				6F7F9CA5253E07920074240B /* agendaContactos */,
 			);
 		};
 /* End PBXProject section */
@@ -406,7 +405,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dcruz.boilerplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcruz.agendaContactos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -425,7 +424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.dcruz.boilerplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcruz.agendaContactos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -435,7 +434,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6F7F9CA1253E07920074240B /* Build configuration list for PBXProject "boilerplate" */ = {
+		6F7F9CA1253E07920074240B /* Build configuration list for PBXProject "agendaContactos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F7F9CB8253E07940074240B /* Debug */,
@@ -444,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6F7F9CBA253E07940074240B /* Build configuration list for PBXNativeTarget "boilerplate" */ = {
+		6F7F9CBA253E07940074240B /* Build configuration list for PBXNativeTarget "agendaContactos" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6F7F9CBB253E07940074240B /* Debug */,
