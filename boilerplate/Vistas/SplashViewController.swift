@@ -5,4 +5,16 @@
 //  Created by user177974 on 19/10/2020.
 //
 
-import Foundation
+import UIKit
+
+class SplashViewController: UIViewController{
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(_ animated: Bool){
+        
+        self.performSegue(withIdentifier: "goToLogin", sender: nil)
+    }
+}
