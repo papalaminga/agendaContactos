@@ -10,12 +10,13 @@ import Alamofire
 
 class NetworkController{
     
+    var apiToken: Any?
+    
+    var localToken: String?
     
     
     //esta variable hace que pueda llamar a los metodos de la api
     static var shared: NetworkController = NetworkController()
-    
-    
     
     //funcion que recoge los datos necesarios para que un usuario pueda hacer loguin
     func login(email: String, password: String, completionHandler: @escaping(Bool)-> Void){
@@ -27,9 +28,11 @@ class NetworkController{
             let password: String
         }
         
+        
+        
         //alamcenamos la URL de la api en una varianle
         let url = URL(string: "https://conctactappservice.herokuapp.com/api/login")!
-        
+
         //preparamos las variables a enviar
         let login: [String:Any] = ["email": email , "password": password]
         
@@ -51,7 +54,13 @@ class NetworkController{
         request.headers = ["Content-Type": "application/json"]
         
         //se envia la peticion usando alamofire
-        AF.request(request).responseJSON { response in
+        AF.request(request).responseDecodable(of: LoginToken.self){
+            
+            response in
+            
+            guard let loginResponse = response.value else {return}
+    
+            let defaults = UserDefaults.standard
             
             debugPrint(response)
             
@@ -63,7 +72,10 @@ class NetworkController{
             }else{
                 
                 //to do acceder al acces token
+                var token = response.value
                 
+                defaults.setValue(loginResponse.token, forKey: "token")
+            
                 completionHandler(true)
             }
             
@@ -122,12 +134,91 @@ class NetworkController{
             
         }
         
-        
     }
     
+    func showContacts(completionHandler: @escaping(Bool)-> Void){
+        
+        let defaults = UserDefaults.standard
+        
+        let tokenApi = defaults.string(forKey: "token")!
+        
+        
+        //llamamos a la url
+        let url = URL(string: "https://conctactappservice.herokuapp.com/api/showContact")!
+        
+        //se lanza la peticion
+        var request = URLRequest(url: url)
+        
+        //se dice protocolo de envio que se va a usar
+        request.httpMethod = "GET"
+        
+        //la informacion que se va a enviar por los headers
+        request.headers = ["Content-Type": "application/json", "Authorization": "Bearer " + tokenApi]
+        
+        AF.request(request).responseDecodable(of: DataContacts.self) { response in
+            
+            debugPrint(response)
+            
+            //con este if se comprueba le codigo devuleto con la peticion
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                completionHandler(true)
+            }
+        }
+    }
     
-    
-    
+    func addContact(contact_name: String, contact_phone: String, contact_email: String, completionHandler:@escaping(Bool)-> Void){
+        
+        let defaults = UserDefaults.standard
+        
+        let tokenApi = defaults.string(forKey: "token")!
+        
+        struct addContact: Encodable {
+            
+            let contact_name: String
+            let contact_phone: Int
+            let contact_email: String
+        }
+        
+        let url = URL(string: "https://conctactappservice.herokuapp.com/api/create")!
+        
+        let newContact: [String:Any] = ["contact_name": contact_name, "contact_phone": contact_phone, "contact_email": contact_email]
+        
+        let registerJson = try? JSONSerialization.data(withJSONObject: newContact)
+        
+        //llamamos a la request, dandole la url
+        var request = URLRequest(url: url)
+        
+        //se le indica el protocolo con el que se envia
+        request.httpMethod = "POST"
+        
+        //se le indica el contenido del body
+        request.httpBody = registerJson
+        
+        //el header
+        request.headers = ["Content-Type": "application/json", "Authorization": "Bearer " + tokenApi]
+        
+        //se envia la peticion usando alamofire
+        AF.request(request).response  { response in
+            
+            debugPrint(response)
+            
+            //con este if se comprueba le codigo devuleto con la peticion
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                completionHandler(true)
+            }
+            
+        }
+    }
     
 }
 

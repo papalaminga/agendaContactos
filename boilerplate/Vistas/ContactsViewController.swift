@@ -8,19 +8,8 @@
 import Foundation
 import UIKit
 
-class contactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class contactsViewController: UIViewController{
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
-    }
     
     
     @IBOutlet weak var tableContact: UITableView!
@@ -29,10 +18,10 @@ class contactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         super.viewDidLoad()
         
-        tableContact.delegate = self
-        tableContact.dataSource = self
+       
+        //NetworkController.shared.showContacts(completionHandler: <#T##(Bool) -> Void#>)
     }
     
-  
+    
     
 }

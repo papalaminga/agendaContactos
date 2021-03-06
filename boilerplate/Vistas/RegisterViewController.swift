@@ -60,7 +60,7 @@ class RegisterViewController: UIViewController{
             }
         })
         
-        
+        cleanBox()
     }
     
     func alertEmptyBox(){
@@ -106,4 +106,11 @@ class RegisterViewController: UIViewController{
         }
     }
     
+    func cleanBox(){
+        
+        boxNameRegister.text = ""
+        boxEmailRegister.text = ""
+        boxPasswordRegister.text = ""
+        boxRepPasswordRegister.text = ""
+    }
 }

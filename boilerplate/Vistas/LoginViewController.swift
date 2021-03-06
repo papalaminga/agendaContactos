@@ -22,19 +22,13 @@ class LoginViewController: UIViewController{
     
     @IBOutlet weak var buttonRegister: UIButton!
     
-    
     override func viewDidLoad() {
-    
-        
         
         super.viewDidLoad()
         
-        var valorEmail: String = boxEmail.text!
-        
-        var valorPassword: String = boxPassword.text!;
         
         }
-    
+    var logApitoken: String = ""
     
     @IBAction func login(_ sender: Any){
         
@@ -52,14 +46,27 @@ class LoginViewController: UIViewController{
                 
                 print("la peticion de login se ha realizado correctamente, 200")
                 
+                
                 //pasamos de forma sincrona el perfomsegue para que se cambie de pantalla cuando la peticion se haya realizado con exito
                 DispatchQueue.global().sync {
                     do{
+                        let defaults = UserDefaults.standard
+                        
+                        let token = defaults.object(forKey: "token")!
+                        
+                        print ("el token distribuido al usuario es el siguiente: ",token)
+                        
+                        let dataToken = defaults.string(forKey: "token")
+                    
                         self.performSegue(withIdentifier: "loginToMain", sender: nil)
+                        
                     }catch {
+                        
                         }
                 }
+                
             }else{
+                
                 print("error al realizar la peticion de login")
                 
                 //en caso de no realizar la peticion devolvemos un mensaje
@@ -70,7 +77,10 @@ class LoginViewController: UIViewController{
                 self.present(alert, animated: true, completion: nil)
             }
         })
+        
+        cleanBox()
     }
+    
 
     //funcion para crear una alerta en caso de que los textfield esten vacios
     func alertEmptyBox(){
@@ -94,6 +104,12 @@ class LoginViewController: UIViewController{
             present(alert, animated: true, completion: nil)
                     
         }
+    }
+    
+    func cleanBox(){
+        
+        boxEmail.text = ""
+        boxPassword.text = ""
     }
 }
 

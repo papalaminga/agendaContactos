@@ -41,11 +41,11 @@
             <objects>
                 <viewController modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="bXR-f1-t8m" customClass="LoginViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zdx-Mu-wbU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-bm-c98">
-                                <rect key="frame" x="100" y="208" width="214" height="480"/>
+                                <rect key="frame" x="100" y="181" width="214" height="480"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vag-Bn-TH4">
                                         <rect key="frame" x="8" y="8" width="198" height="20.5"/>
@@ -110,12 +110,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CY-r5-WfU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-84.057971014492765" y="-642.1875"/>
+            <point key="canvasLocation" x="-43" y="-642"/>
         </scene>
         <!--Añadir contacto-->
         <scene sceneID="ho4-pG-VwO">
             <objects>
-                <viewController id="LLF-Jt-7ug" sceneMemberID="viewController">
+                <viewController id="LLF-Jt-7ug" customClass="AddContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gG2-dy-IAv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -161,6 +161,9 @@
                                         <color key="backgroundColor" systemColor="systemBlueColor"/>
                                         <color key="tintColor" systemColor="systemBackgroundColor"/>
                                         <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addContact:" destination="LLF-Jt-7ug" eventType="touchUpInside" id="EYw-QT-ajJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -169,6 +172,12 @@
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Añadir contacto" id="87C-aU-a57"/>
+                    <connections>
+                        <outlet property="InputNameContact" destination="jvi-Lc-CNS" id="MRP-kd-7ga"/>
+                        <outlet property="InputPhoneContact" destination="5mF-1q-oON" id="tTJ-sT-24W"/>
+                        <outlet property="buttonAddContact" destination="gmh-KT-bD6" id="Z34-1z-a4f"/>
+                        <outlet property="inputEmailContact" destination="4t1-3g-UCd" id="rht-w9-Tm9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RR7-Ox-pbS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -256,18 +265,18 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVb-ms-wXL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2596" y="344"/>
+            <point key="canvasLocation" x="-2597" y="338"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="XV5-eW-z9l">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="teV-ov-CTf" customClass="RegisterViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6wq-gp-1uL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pkj-qu-VPX">
-                                <rect key="frame" x="140" y="84" width="134" height="488"/>
+                                <rect key="frame" x="140" y="96" width="134" height="488"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OYA-Tn-3hm">
                                         <rect key="frame" x="0.0" y="0.0" width="134" height="20.5"/>
@@ -365,7 +374,7 @@
         <!--editar contacto-->
         <scene sceneID="U47-BH-r4D">
             <objects>
-                <viewController id="83V-VO-QMu" sceneMemberID="viewController">
+                <viewController id="83V-VO-QMu" customClass="EditContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JbA-xH-aPQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -381,9 +390,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="HqN-TI-0vh"/>
         <segue reference="OAt-LC-Hv3"/>
-        <segue reference="hOB-xT-8Br"/>
+        <segue reference="sCl-r6-n1H"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
