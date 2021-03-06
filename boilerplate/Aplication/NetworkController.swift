@@ -10,11 +10,15 @@ import Alamofire
 
 class NetworkController{
     
+    
+    
     //esta variable hace que pueda llamar a los metodos de la api
     static var shared: NetworkController = NetworkController()
     
+    
+    
     //funcion que recoge los datos necesarios para que un usuario pueda hacer loguin
-    func login(email: String, password: String){
+    func login(email: String, password: String, completionHandler: @escaping(Bool)-> Void){
         
         //se estructuran los datos a mandar
         struct Login: Encodable {
@@ -51,11 +55,23 @@ class NetworkController{
             
             debugPrint(response)
             
+            //con este if se comprueba le codigo devuleto con la peticion
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                //to do acceder al acces token
+                
+                completionHandler(true)
+            }
+            
         }
         
     }
     
-    func register(name: String, email: String, password: String, password_confirmation: String){
+    func register(name: String, email: String, password: String, password_confirmation: String, completionHandler: @escaping(Bool)-> Void){
         
         struct Register: Encodable {
             
@@ -93,7 +109,20 @@ class NetworkController{
             
             debugPrint(response)
             
+            //con este if se comprueba le codigo devuleto con la peticion
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                
+                completionHandler(true)
+            }
+            
         }
+        
+        
     }
     
     

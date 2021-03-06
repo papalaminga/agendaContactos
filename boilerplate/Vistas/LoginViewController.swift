@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class LoginViewController: UIViewController{
     
     
@@ -39,20 +38,44 @@ class LoginViewController: UIViewController{
     
     @IBAction func login(_ sender: Any){
         
-        if (boxEmail == nil || boxPassword == nil ){
+        //llamo a esta funcion para comprobar que los textfield tengan datos
+        alertEmptyBox()
+        
+        //esta funcion se encargara de hacer una peticion cuando se pulse el boton
+        NetworkController.shared.login(email: boxEmail.text!, password: boxPassword.text!, completionHandler: {
+            success in
             
-            alertEmptyBox()
-        }
-        
-        NetworkController.shared.login(email: boxEmail.text!, password: boxPassword.text!)
-        
-        
+            print("Peticion de login enviada")
+            
+            //con esta condicion decimos que hacer en caso de que funcione y no funcione
+            if success{
+                
+                print("la peticion de login se ha realizado correctamente, 200")
+                
+                //pasamos de forma sincrona el perfomsegue para que se cambie de pantalla cuando la peticion se haya realizado con exito
+                DispatchQueue.global().sync {
+                    do{
+                        self.performSegue(withIdentifier: "loginToMain", sender: nil)
+                    }catch {
+                        }
+                }
+            }else{
+                print("error al realizar la peticion de login")
+                
+                //en caso de no realizar la peticion devolvemos un mensaje
+                let alert = UIAlertController(title: "Datos incorrectos", message: "los datos enviados no son validos", preferredStyle: .alert)
+                        
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                            
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
     }
 
-    
+    //funcion para crear una alerta en caso de que los textfield esten vacios
     func alertEmptyBox(){
                 
-        if(boxEmail.text == nil){
+        if(!boxEmail.hasText){
             
             let alert = UIAlertController(title: "Login", message: "No has introducido ningun email", preferredStyle: .alert)
                     
@@ -62,7 +85,7 @@ class LoginViewController: UIViewController{
             
         }
         
-        if(boxPassword.text == nil){
+        if(!boxPassword.hasText){
             
             let alert = UIAlertController(title: "Login", message: "No has introducido ninguna contraseña", preferredStyle: .alert)
                     
