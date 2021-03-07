@@ -44,7 +44,7 @@ class RegisterViewController: UIViewController{
                 //pasamos de forma sincrona el perfomsegue para que se cambie de pantalla cuando la peticion se haya realizado con exito
                 DispatchQueue.global().sync {
                     do{
-                        self.performSegue(withIdentifier: "goToLogin", sender: nil)
+                        self.performSegue(withIdentifier: "registerToLogin", sender: nil)
                     }catch {
                         }
                 }

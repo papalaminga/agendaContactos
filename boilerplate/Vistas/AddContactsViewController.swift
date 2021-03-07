@@ -31,6 +31,7 @@ class AddContactsViewController: UIViewController{
         
         print("peticion de añadir usuario enviada")
         
+        let phone = Int(InputPhoneContact.text!)
         NetworkController.shared.addContact(contact_name: InputNameContact.text!, contact_phone: InputPhoneContact.text!, contact_email: inputEmailContact.text!, completionHandler:{
             
             
