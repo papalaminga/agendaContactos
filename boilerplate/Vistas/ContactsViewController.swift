@@ -61,7 +61,7 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
         let editName = datacell?.contactName
         let editPhone = datacell?.contactPhone
         let editEmail = datacell?.contactEmail
-        let id = datacell?.contactName
+        let id = datacell?.id
         
         defaults.setValue(editName, forKey: "name")
         defaults.setValue(editPhone, forKey: "phone")

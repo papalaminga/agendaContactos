@@ -227,5 +227,52 @@ class NetworkController{
         }
     }
     
+    func updateContact(contact_name: String, contact_phone: String, contact_email: String, completionHandler:@escaping(Bool)-> Void){
+    
+        let defaults = UserDefaults.standard
+        
+        let tokenApi = defaults.string(forKey: "token")!
+        
+        let id = defaults.string(forKey: "id")!
+        
+        struct addContact: Encodable {
+    
+            let contact_name: String
+            let contact_phone: Int
+            let contact_email: String
+        }
+        
+        
+        
+        let url = URL(string: "https://conctactappservice.herokuapp.com/api/updateContact/"+id)!
+        
+        let editedContact: [String:Any] = ["contact_name": contact_name, "contact_phone": contact_phone, "contact_email": contact_email]
+        
+        let registerJson = try? JSONSerialization.data(withJSONObject: editedContact)
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        
+        request.httpBody = registerJson
+        
+        request.headers = ["Content-Type": "application/json", "Authorization": "Bearer " + tokenApi]
+        
+        AF.request(request).response  { response in
+            
+            debugPrint(response)
+            
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                completionHandler(true)
+            }
+            
+        }
+        
+    }
 }
 
