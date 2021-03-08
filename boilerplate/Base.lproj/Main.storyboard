@@ -74,6 +74,11 @@
                                         <rect key="frame" x="8" y="307.5" width="378" height="30"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="login:" destination="bXR-f1-t8m" eventType="touchUpInside" id="5ZK-jt-Tz3"/>
                                         </connections>
@@ -86,7 +91,7 @@
                                             <color key="titleShadowColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="G58-Mk-dhv" kind="presentation" id="bRa-qD-GLQ"/>
+                                            <segue destination="G58-Mk-dhv" kind="show" id="bRa-qD-GLQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-xo-XVM">
@@ -402,7 +407,7 @@
             <objects>
                 <viewController id="G58-Mk-dhv" customClass="ChangePasswordViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x99-Ew-oVU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-rz-L3r">
@@ -442,6 +447,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="M8T-P5-KGs"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ZR7-kZ-vZh"/>
                     <connections>
                         <outlet property="boxChangePass" destination="T7H-Iq-6D1" id="VFA-I8-Ozy"/>
                         <outlet property="buttonRecoverPass" destination="nd6-k6-6rb" id="9Sd-c2-aEa"/>
@@ -449,7 +455,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sbw-cV-GD6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-43" y="255"/>
+            <point key="canvasLocation" x="-12" y="375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hwI-ho-fmh">
@@ -460,6 +466,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yhj-64-2Sp">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="bXR-f1-t8m" kind="relationship" relationship="rootViewController" id="sCl-r6-n1H"/>
                     </connections>
@@ -558,10 +567,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cpG-zb-9Ep"/>
         <segue reference="OAt-LC-Hv3"/>
         <segue reference="r6p-Cw-TGU"/>
-        <segue reference="UH7-Li-TZG"/>
+        <segue reference="hOB-xT-8Br"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="AccentColor">
