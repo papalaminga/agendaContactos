@@ -8,7 +8,5 @@ target 'agendaContactos' do
   # Pods for boilerplate
 	
   pod 'Alamofire', '~> 5.2'
-  
-  pod 'SwiftJWT'
 
 end

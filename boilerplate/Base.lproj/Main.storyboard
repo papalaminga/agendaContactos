@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,8 +25,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
                     <connections>
                         <segue destination="fYW-jM-HgU" kind="show" identifier="goToLogin" id="f9u-2h-PGp"/>
@@ -55,58 +55,63 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="32H-23-RmF" userLabel="Box Email">
-                                        <rect key="frame" x="8" y="79" width="378" height="34"/>
+                                        <rect key="frame" x="8" y="76" width="378" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uji-gn-6sQ">
-                                        <rect key="frame" x="8" y="163.5" width="378" height="20.5"/>
+                                        <rect key="frame" x="8" y="158" width="378" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6T-KE-sO4">
-                                        <rect key="frame" x="8" y="234.5" width="378" height="34"/>
+                                        <rect key="frame" x="8" y="226" width="378" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7W-4J-wcY">
-                                        <rect key="frame" x="8" y="319" width="378" height="30"/>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z7W-4J-wcY">
+                                        <rect key="frame" x="8" y="307.5" width="378" height="30"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="login:" destination="bXR-f1-t8m" eventType="touchUpInside" id="5ZK-jt-Tz3"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-V7-GYE" userLabel="Button Password">
-                                        <rect key="frame" x="8" y="399.5" width="378" height="30"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
-                                        <state key="normal" title="Button"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXh-V7-GYE" userLabel="Button Password">
+                                        <rect key="frame" x="8" y="385.5" width="378" height="38"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <state key="normal" title="¿No te acuerdas de tu contraseña?">
+                                            <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="titleShadowColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
                                         <connections>
                                             <segue destination="G58-Mk-dhv" kind="presentation" id="bRa-qD-GLQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-xo-XVM">
-                                        <rect key="frame" x="8" y="480" width="378" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <state key="normal" title="Registro"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGZ-xo-XVM">
+                                        <rect key="frame" x="8" y="471" width="378" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Registrate,es gratis">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
                                         <connections>
                                             <segue destination="teV-ov-CTf" kind="show" id="HqN-TI-0vh"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="cVA-DC-iEZ"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cVA-DC-iEZ" firstAttribute="bottom" secondItem="bTK-bm-c98" secondAttribute="bottom" constant="150" id="Hm9-zV-bws"/>
                             <constraint firstItem="cVA-DC-iEZ" firstAttribute="trailing" secondItem="bTK-bm-c98" secondAttribute="trailing" constant="10" id="JtK-gr-vBN"/>
                             <constraint firstItem="bTK-bm-c98" firstAttribute="leading" secondItem="cVA-DC-iEZ" secondAttribute="leading" constant="10" id="M7h-3s-xvF"/>
                             <constraint firstItem="bTK-bm-c98" firstAttribute="top" secondItem="cVA-DC-iEZ" secondAttribute="top" constant="150" id="hcO-aB-Xx9"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="cVA-DC-iEZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="7oU-VZ-Rhm"/>
                     <connections>
@@ -124,7 +129,7 @@
         <!--Añadir contacto-->
         <scene sceneID="ho4-pG-VwO">
             <objects>
-                <viewController id="LLF-Jt-7ug" customClass="AddContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="LLF-Jt-7ug" customClass="AddContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gG2-dy-IAv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,11 +173,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmh-KT-bD6">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmh-KT-bD6">
                                         <rect key="frame" x="0.0" y="378" width="394" height="55"/>
-                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                        <color key="tintColor" systemColor="systemBackgroundColor"/>
-                                        <state key="normal" title="Add"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
                                         <connections>
                                             <action selector="addContact:" destination="LLF-Jt-7ug" eventType="touchUpInside" id="EYw-QT-ajJ"/>
                                         </connections>
@@ -180,13 +187,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="kGg-wf-afp"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="kGg-wf-afp" firstAttribute="trailing" secondItem="XHN-mK-0tx" secondAttribute="trailing" constant="10" id="1mN-O0-7bX"/>
                             <constraint firstItem="XHN-mK-0tx" firstAttribute="top" secondItem="kGg-wf-afp" secondAttribute="top" constant="150" id="Dc9-Lu-5jF"/>
                             <constraint firstItem="XHN-mK-0tx" firstAttribute="leading" secondItem="kGg-wf-afp" secondAttribute="leading" constant="10" id="Sgq-AY-AiA"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="kGg-wf-afp"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Añadir contacto" id="87C-aU-a57"/>
                     <connections>
@@ -203,14 +210,14 @@
         <!--Contactos-->
         <scene sceneID="avM-5I-v2J">
             <objects>
-                <viewController id="E3k-NV-vJ7" customClass="ContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="E3k-NV-vJ7" customClass="ContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66e-q9-Prm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="hTW-E7-nF4">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="kLI-vv-kiz" customClass="TableViewCell" customModule="agendaContactos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
@@ -264,14 +271,14 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="BQR-aU-pLu"/>
-                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="BQR-aU-pLu" firstAttribute="bottom" secondItem="hTW-E7-nF4" secondAttribute="bottom" id="28u-WL-9Zq"/>
                             <constraint firstItem="hTW-E7-nF4" firstAttribute="top" secondItem="BQR-aU-pLu" secondAttribute="top" id="2gZ-4g-Qul"/>
                             <constraint firstItem="BQR-aU-pLu" firstAttribute="trailing" secondItem="hTW-E7-nF4" secondAttribute="trailing" id="aS6-1G-Ack"/>
                             <constraint firstItem="hTW-E7-nF4" firstAttribute="leading" secondItem="BQR-aU-pLu" secondAttribute="leading" id="vC2-lZ-qSr"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="BQR-aU-pLu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contactos" id="VEK-x4-CqI"/>
                     <connections>
@@ -340,10 +347,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-vZ-2HU">
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaG-vZ-2HU">
                                         <rect key="frame" x="0.0" y="298.5" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxi-RJ-Hka">
                                         <rect key="frame" x="0.0" y="366" width="394" height="20.5"/>
@@ -354,27 +361,28 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ts0-fJ-RW2">
                                         <rect key="frame" x="0.0" y="420.5" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YW-NM-11G">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2YW-NM-11G">
                                         <rect key="frame" x="0.0" y="488" width="394" height="30"/>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="Register:" destination="teV-ov-CTf" eventType="touchUpInside" id="zGO-dI-Fdd"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Tbw-b0-nyc"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tbw-b0-nyc" firstAttribute="bottom" secondItem="pkj-qu-VPX" secondAttribute="bottom" constant="150" id="P5b-lC-Z0U"/>
                             <constraint firstItem="pkj-qu-VPX" firstAttribute="top" secondItem="Tbw-b0-nyc" secondAttribute="top" constant="150" id="PkQ-k2-Gkj"/>
                             <constraint firstItem="Tbw-b0-nyc" firstAttribute="trailing" secondItem="pkj-qu-VPX" secondAttribute="trailing" constant="10" id="Sde-vl-fRr"/>
                             <constraint firstItem="pkj-qu-VPX" firstAttribute="leading" secondItem="Tbw-b0-nyc" secondAttribute="leading" constant="10" id="lp7-iM-eUm"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tbw-b0-nyc"/>
                     </view>
                     <navigationItem key="navigationItem" id="vz2-mB-GgG"/>
                     <connections>
@@ -394,26 +402,26 @@
             <objects>
                 <viewController id="G58-Mk-dhv" customClass="ChangePasswordViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x99-Ew-oVU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalCentering" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YRm-rz-L3r">
                                 <rect key="frame" x="10" y="150" width="394" height="508"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdi-rF-J9p">
-                                        <rect key="frame" x="8" y="8" width="378" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="8" y="8" width="378" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T7H-Iq-6D1" userLabel="Box Email">
-                                        <rect key="frame" x="8" y="234.5" width="378" height="34"/>
+                                        <rect key="frame" x="8" y="238.5" width="378" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-k6-6rb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd6-k6-6rb">
                                         <rect key="frame" x="8" y="470" width="378" height="30"/>
-                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
                                             <action selector="recoverPass:" destination="G58-Mk-dhv" eventType="touchUpInside" id="uff-xY-lGk"/>
@@ -421,18 +429,18 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="M8T-P5-KGs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="YRm-rz-L3r" firstAttribute="top" secondItem="M8T-P5-KGs" secondAttribute="top" constant="150" id="8rC-g0-hrm"/>
                             <constraint firstItem="M8T-P5-KGs" firstAttribute="bottom" secondItem="YRm-rz-L3r" secondAttribute="bottom" constant="150" id="Cm0-xj-htY"/>
                             <constraint firstItem="M8T-P5-KGs" firstAttribute="trailing" secondItem="YRm-rz-L3r" secondAttribute="trailing" constant="10" id="JQG-7q-MBI"/>
                             <constraint firstItem="YRm-rz-L3r" firstAttribute="leading" secondItem="M8T-P5-KGs" secondAttribute="leading" constant="10" id="VkH-WK-ffP"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="M8T-P5-KGs"/>
                     </view>
                     <connections>
                         <outlet property="boxChangePass" destination="T7H-Iq-6D1" id="VFA-I8-Ozy"/>
@@ -463,13 +471,13 @@
         <!--editar contacto-->
         <scene sceneID="U47-BH-r4D">
             <objects>
-                <viewController id="83V-VO-QMu" customClass="EditContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="83V-VO-QMu" customClass="EditContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JbA-xH-aPQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="3Kq-gg-paN">
-                                <rect key="frame" x="10" y="150" width="394" height="508"/>
+                                <rect key="frame" x="10" y="194" width="394" height="518"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKe-YV-h5e">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="24"/>
@@ -478,45 +486,45 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5Pt-dY-s0H">
-                                        <rect key="frame" x="0.0" y="63" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="64.5" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b59-01-OsW">
-                                        <rect key="frame" x="0.0" y="136.5" width="394" height="24"/>
+                                        <rect key="frame" x="0.0" y="139" width="394" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9Ah-ze-g2D">
-                                        <rect key="frame" x="0.0" y="199.5" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="203.5" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6Z-iM-z5N">
-                                        <rect key="frame" x="0.0" y="272.5" width="394" height="24"/>
+                                        <rect key="frame" x="0.0" y="278.5" width="394" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aSb-8j-e2p">
-                                        <rect key="frame" x="0.0" y="335.5" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="343" width="394" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRP-Oo-3Rp">
-                                        <rect key="frame" x="0.0" y="409" width="394" height="30"/>
-                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SRP-Oo-3Rp">
+                                        <rect key="frame" x="0.0" y="417.5" width="394" height="30"/>
+                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Update"/>
                                         <connections>
                                             <action selector="editContact:" destination="83V-VO-QMu" eventType="touchUpInside" id="hek-QK-tnC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-WB-T9Y">
-                                        <rect key="frame" x="0.0" y="478" width="394" height="30"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdO-WB-T9Y">
+                                        <rect key="frame" x="0.0" y="488" width="394" height="30"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Delete">
-                                            <color key="titleColor" systemColor="labelColor"/>
+                                            <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
                                             <action selector="DeleteContact:" destination="83V-VO-QMu" eventType="touchUpInside" id="P6y-ZB-yf9"/>
@@ -525,14 +533,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="MfM-9B-Dja"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="MfM-9B-Dja" firstAttribute="bottom" secondItem="3Kq-gg-paN" secondAttribute="bottom" constant="150" id="1J1-PT-GzI"/>
                             <constraint firstItem="MfM-9B-Dja" firstAttribute="trailing" secondItem="3Kq-gg-paN" secondAttribute="trailing" constant="10" id="IfI-Py-b21"/>
                             <constraint firstItem="3Kq-gg-paN" firstAttribute="top" secondItem="MfM-9B-Dja" secondAttribute="top" constant="150" id="aXz-CA-yUi"/>
                             <constraint firstItem="3Kq-gg-paN" firstAttribute="leading" secondItem="MfM-9B-Dja" secondAttribute="leading" constant="10" id="vtg-27-0tD"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="MfM-9B-Dja"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="editar contacto" id="r4h-FZ-21O"/>
                     <navigationItem key="navigationItem" id="2wN-3z-tpp"/>
@@ -553,38 +561,11 @@
         <segue reference="cpG-zb-9Ep"/>
         <segue reference="OAt-LC-Hv3"/>
         <segue reference="r6p-Cw-TGU"/>
-        <segue reference="hOB-xT-8Br"/>
+        <segue reference="UH7-Li-TZG"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="placeholderTextColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

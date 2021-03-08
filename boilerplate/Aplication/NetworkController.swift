@@ -274,5 +274,47 @@ class NetworkController{
         }
         
     }
+    
+    func deleteContact(id:Int, completionHandler:@escaping(Bool)-> Void){
+        
+        let defaults = UserDefaults.standard
+        
+        let tokenApi = defaults.string(forKey: "token")!
+        
+        struct addContact: Encodable {
+        
+                let id: Int
+                
+            }
+        
+        let url = URL(string: "https://conctactappservice.herokuapp.com/api/eraseContact")!
+        
+        let erasedContact: [String:Any] = ["id": id]
+        
+        let eraseJson = try? JSONSerialization.data(withJSONObject: erasedContact)
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "POST"
+        
+        request.httpBody = eraseJson
+        
+        request.headers = ["Content-Type": "application/json", "Authorization": "Bearer " + tokenApi]
+        
+        AF.request(request).response  { response in
+            
+            debugPrint(response)
+            
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                completionHandler(true)
+            }
+            
+        }
+    }
 }
 
