@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33A4D40D25F92379007FBD0F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A4D40C25F92379007FBD0F /* UserViewController.swift */; };
 		4DA3F3A0D0888DD68109E320 /* Pods_agendaContactos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41118AA6D818B8154FF9091B /* Pods_agendaContactos.framework */; };
 		6F28536225F3A1C6009FBF85 /* EditContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F28536125F3A1C6009FBF85 /* EditContactsViewController.swift */; };
 		6F28536925F3DFBC009FBF85 /* login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F28536825F3DFBC009FBF85 /* login.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		170FFC3F0E59350F1BFA9A03 /* Pods-agendaContactos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-agendaContactos.debug.xcconfig"; path = "Target Support Files/Pods-agendaContactos/Pods-agendaContactos.debug.xcconfig"; sourceTree = "<group>"; };
+		33A4D40C25F92379007FBD0F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		41118AA6D818B8154FF9091B /* Pods_agendaContactos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_agendaContactos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F28536125F3A1C6009FBF85 /* EditContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactsViewController.swift; sourceTree = "<group>"; };
 		6F28536825F3DFBC009FBF85 /* login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = login.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		6F28536725F3DFA6009FBF85 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				6F7F9CC9253E09360074240B /* HomeViewController.swift */,
 				6F28536825F3DFBC009FBF85 /* login.swift */,
 				6F28536B25F3F4C0009FBF85 /* contacts.swift */,
 			);
@@ -122,10 +125,10 @@
 			children = (
 				6F28536725F3DFA6009FBF85 /* Structs */,
 				6F28536425F3A24A009FBF85 /* access */,
-				6F7F9CC9253E09360074240B /* HomeViewController.swift */,
 				6F324B8025EE5D6600284859 /* AddContactsViewController.swift */,
 				6F28536125F3A1C6009FBF85 /* EditContactsViewController.swift */,
 				6F28536F25F41A2E009FBF85 /* ContactsViewController.swift */,
+				33A4D40C25F92379007FBD0F /* UserViewController.swift */,
 			);
 			path = Vistas;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F28537325F429FF009FBF85 /* TableViewCell.swift in Sources */,
+				33A4D40D25F92379007FBD0F /* UserViewController.swift in Sources */,
 				6F28536225F3A1C6009FBF85 /* EditContactsViewController.swift in Sources */,
 				6F7F9CAA253E07920074240B /* AppDelegate.swift in Sources */,
 				6F7F9CAC253E07920074240B /* SceneDelegate.swift in Sources */,

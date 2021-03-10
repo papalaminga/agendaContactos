@@ -32,6 +32,7 @@ class LoginViewController: UIViewController{
     
     @IBAction func login(_ sender: Any){
         
+        print ("boton pulsado∫")
         //llamo a esta funcion para comprobar que los textfield tengan datos
         alertEmptyBox()
         
