@@ -69,6 +69,7 @@
 		6F28536425F3A24A009FBF85 /* access */ = {
 			isa = PBXGroup;
 			children = (
+				6F7F9CC9253E09360074240B /* HomeViewController.swift */,
 				6F7F9CBF253E083E0074240B /* SplashViewController.swift */,
 				6F7F9CC3253E088F0074240B /* LoginViewController.swift */,
 				6F7F9CC6253E08E80074240B /* RegisterViewController.swift */,
@@ -122,7 +123,6 @@
 			children = (
 				6F28536725F3DFA6009FBF85 /* Structs */,
 				6F28536425F3A24A009FBF85 /* access */,
-				6F7F9CC9253E09360074240B /* HomeViewController.swift */,
 				6F324B8025EE5D6600284859 /* AddContactsViewController.swift */,
 				6F28536125F3A1C6009FBF85 /* EditContactsViewController.swift */,
 				6F28536F25F41A2E009FBF85 /* ContactsViewController.swift */,
@@ -437,6 +437,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = boilerplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +457,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = boilerplate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -44,6 +44,7 @@ class EditContactsViewController: UIViewController{
     
     
     @IBAction func editContact(_ sender: Any) {
+        
         let defaults = UserDefaults.standard
                 
        
@@ -55,16 +56,8 @@ class EditContactsViewController: UIViewController{
             if success{
                     
                 print("peticion de editar usuario Aceptada, 200")
-                
-                
-                self.performSegue(withIdentifier: "goContacts", sender: ContactsViewController.self)
-                
-                let alert = UIAlertController(title: "editado", message: "el usuario se ha actualizado", preferredStyle: .alert)
-                    
-                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                        
-                
-                
+    
+                self.dismiss(animated: true, completion: nil)
                 
             }else{
                 
@@ -79,6 +72,36 @@ class EditContactsViewController: UIViewController{
     
     
     @IBAction func DeleteContact(_ sender: Any) {
+        
+        print("peticion de eliminar usuario enviada")
+        
+        let defaults = UserDefaults.standard
+        
+        var id = Int(defaults.string(forKey: "id")!)!
+        
+        NetworkController.shared.deleteContact(id: id, completionHandler:{
+            
+            success in
+            
+            if success{
+                
+                print("peticion de eliminar usuario Aceptada, 200")
+                
+                self.dismiss(animated: true, completion: nil)
+            }else{
+                
+                let alert = UIAlertController(title: "Usuario no eliminado", message: "algo ha fallado", preferredStyle: .alert)
+                    
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {(accion) in
+                    
+                        self.dismiss(animated: true, completion: nil)
+                }))
+                        
+                self.present(alert, animated: true, completion: nil)
+            }
+        })
+        
+            
     }
     
     

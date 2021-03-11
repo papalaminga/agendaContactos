@@ -22,18 +22,6 @@ struct DataContacts: Codable{
         case contactPhone = "contact_phone"
         case contactEmail = "contact_email"
     }
-    
-    public func getName() -> String {
-            return self.contactName
-        }
-    
-    public func getPhone() -> Int {
-        return self.contactPhone
-    }
-    
-    public func getEmail() -> String {
-        return self.contactEmail
-    }
 
 }
 
@@ -42,9 +30,3 @@ struct DataContacts: Codable{
     
 
     
-/*struct addContact: Encodable {
-    
-    let contact_name: String
-    let contact_phone: Int
-    let contact_email: String
-}*/

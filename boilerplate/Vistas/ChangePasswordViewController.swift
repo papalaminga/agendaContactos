@@ -22,6 +22,8 @@ class ChangePasswordViewController: UIViewController{
     
     @IBAction func recoverPass(_ sender: Any) {
         
+        alertEmptyBox()
+        
         print("Petición de recuperar contraseña enviada")
         
         NetworkController.shared.recoverPass(email: boxChangePass.text!, completionHandler: {
@@ -57,5 +59,26 @@ class ChangePasswordViewController: UIViewController{
             }
         
         })
+        
+        cleanBox()
+    }
+    
+    func alertEmptyBox(){
+                
+        if(!boxChangePass.hasText){
+            
+            let alert = UIAlertController(title: "Login", message: "No has introducido ningun email", preferredStyle: .alert)
+                    
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                        
+            present(alert, animated: true, completion: nil)
+            
+        }
+    }
+    
+    func cleanBox(){
+        
+        boxChangePass.text = ""
+        
     }
 }
