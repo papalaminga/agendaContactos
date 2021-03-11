@@ -14,11 +14,9 @@ class NetworkController{
     var data:[DataContacts] = []
     var contactArray: Any = []
     
-    
     //esta variable hace que pueda llamar a los metodos de la api
     static var shared: NetworkController = NetworkController()
     
-    //funcion que recoge los datos necesarios para que un usuario pueda hacer loguin
     func login(email: String, password: String, completionHandler: @escaping(Bool)-> Void){
         
         //se estructuran los datos a mandar
@@ -317,6 +315,38 @@ class NetworkController{
             }
             
         }
+    }
+    
+    func logout(completionHandler:@escaping(Bool)-> Void){
+        
+        let defaults = UserDefaults.standard
+        
+        let tokenApi = defaults.string(forKey: "token")!
+        
+        
+        let url = URL(string: "https://conctactappservice.herokuapp.com/api/logout")!
+        
+        var request = URLRequest(url: url)
+        
+        request.httpMethod = "GET"
+        
+        request.headers = ["Content-Type": "application/json", "Authorization": "Bearer " + tokenApi]
+        
+        AF.request(request).response  { response in
+            
+            debugPrint(response)
+            
+            if ((response.response?.statusCode) != 200){
+                
+                completionHandler(false)
+                
+            }else{
+                
+                completionHandler(true)
+            }
+            
+        }
+        
     }
 }
 

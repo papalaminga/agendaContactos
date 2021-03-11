@@ -96,6 +96,23 @@ class ContactsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
   
+    @IBAction func logout(_ sender: Any) {
+        
+        
+        NetworkController.shared.logout(completionHandler: {
+            
+            success in
+            
+            if success{
+                
+                print("logout realizado con exito", 200)
+                
+                self.dismiss(animated: true, completion: nil)
+                
+            }
+        })
+        
+    }
     
     
     

@@ -123,11 +123,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="LLF-Jt-7ug" customClass="AddContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gG2-dy-IAv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="XHN-mK-0tx">
-                                <rect key="frame" x="10" y="150" width="394" height="343"/>
+                                <rect key="frame" x="10" y="194" width="394" height="343"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uwt-Z5-tXp">
                                         <rect key="frame" x="8" y="8" width="378" height="25"/>
@@ -166,7 +166,7 @@
                                 <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gmh-KT-bD6">
-                                <rect key="frame" x="158" y="578" width="100" height="100"/>
+                                <rect key="frame" x="158" y="622" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100.5" id="JF5-eP-EIH"/>
                                 </constraints>
@@ -329,11 +329,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="E3k-NV-vJ7" customClass="ContactsViewController" customModule="agendaContactos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="66e-q9-Prm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="30" sectionFooterHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="hTW-E7-nF4">
-                                <rect key="frame" x="0.0" y="38" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="82" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="120" id="kLI-vv-kiz" customClass="TableViewCell" customModule="agendaContactos" customModuleProvider="target">
@@ -388,13 +388,26 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH5-99-fuC">
-                                <rect key="frame" x="360" y="1" width="34" height="30"/>
+                                <rect key="frame" x="360" y="45" width="34" height="30"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" backgroundImage="person.circle" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="large"/>
                                 </state>
                                 <connections>
                                     <segue destination="xoh-7V-SoC" kind="presentation" id="CF8-Y8-ihq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWP-44-mtk">
+                                <rect key="frame" x="20" y="43.5" width="37" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="Fxq-0F-Leh"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
+                                <state key="normal" backgroundImage="person.fill.xmark" catalog="system">
+                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="logout:" destination="E3k-NV-vJ7" eventType="touchUpInside" id="2np-lY-BV4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -406,9 +419,12 @@
                             <constraint firstItem="BQR-aU-pLu" firstAttribute="trailing" secondItem="gH5-99-fuC" secondAttribute="trailing" constant="20" id="73P-U9-wAY"/>
                             <constraint firstItem="hTW-E7-nF4" firstAttribute="top" secondItem="gH5-99-fuC" secondAttribute="bottom" constant="6.5" id="YKU-OY-bzY"/>
                             <constraint firstItem="BQR-aU-pLu" firstAttribute="trailing" secondItem="hTW-E7-nF4" secondAttribute="trailing" id="aS6-1G-Ack"/>
+                            <constraint firstItem="hTW-E7-nF4" firstAttribute="top" secondItem="KWP-44-mtk" secondAttribute="bottom" constant="8" id="deW-Cd-eo3"/>
                             <constraint firstItem="gH5-99-fuC" firstAttribute="top" secondItem="BQR-aU-pLu" secondAttribute="top" constant="0.5" id="giu-vD-t7c"/>
                             <constraint firstItem="gH5-99-fuC" firstAttribute="leading" secondItem="BQR-aU-pLu" secondAttribute="leading" constant="360" id="naY-4p-7kZ"/>
+                            <constraint firstItem="KWP-44-mtk" firstAttribute="leading" secondItem="66e-q9-Prm" secondAttribute="leadingMargin" id="pca-wS-cih"/>
                             <constraint firstItem="hTW-E7-nF4" firstAttribute="leading" secondItem="BQR-aU-pLu" secondAttribute="leading" id="vC2-lZ-qSr"/>
+                            <constraint firstItem="KWP-44-mtk" firstAttribute="top" secondItem="66e-q9-Prm" secondAttribute="topMargin" constant="-2" id="zfJ-sa-ZPr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Contactos" id="VEK-x4-CqI"/>
@@ -423,7 +439,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="abi-DQ-UqH">
             <objects>
-                <tabBarController id="UgT-T4-G5Z" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="UgT-T4-G5Z" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="8Hz-bV-xRQ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zI0-lf-QIz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -749,6 +765,7 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="person.crop.circle.badge.plus" catalog="system" width="128" height="113"/>
+        <image name="person.fill.xmark" catalog="system" width="128" height="88"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AccentColor">
