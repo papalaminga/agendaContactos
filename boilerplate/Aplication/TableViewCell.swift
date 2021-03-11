@@ -16,8 +16,9 @@ class TableViewCell: UITableViewCell{
     @IBOutlet weak var labelPhone: UILabel!
     
     @IBOutlet weak var labelEmail: UILabel!
-    
+
     override func awakeFromNib() {
         
     }
 }
+

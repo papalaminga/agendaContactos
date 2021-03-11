@@ -14,6 +14,7 @@ class NetworkController{
     var data:[DataContacts] = []
     var contactArray: Any = []
     
+    
     //esta variable hace que pueda llamar a los metodos de la api
     static var shared: NetworkController = NetworkController()
     
@@ -136,6 +137,7 @@ class NetworkController{
                 completionHandler(false)
                 
             }else{
+                
                 var data = response.value!
                 self.contactArray = data
                 debugPrint(data)

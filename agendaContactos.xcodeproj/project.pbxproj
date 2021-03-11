@@ -69,6 +69,7 @@
 		6F28536425F3A24A009FBF85 /* access */ = {
 			isa = PBXGroup;
 			children = (
+				6F7F9CC9253E09360074240B /* HomeViewController.swift */,
 				6F7F9CBF253E083E0074240B /* SplashViewController.swift */,
 				6F7F9CC3253E088F0074240B /* LoginViewController.swift */,
 				6F7F9CC6253E08E80074240B /* RegisterViewController.swift */,
@@ -80,7 +81,6 @@
 		6F28536725F3DFA6009FBF85 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
-				6F7F9CC9253E09360074240B /* HomeViewController.swift */,
 				6F28536825F3DFBC009FBF85 /* login.swift */,
 				6F28536B25F3F4C0009FBF85 /* contacts.swift */,
 			);
